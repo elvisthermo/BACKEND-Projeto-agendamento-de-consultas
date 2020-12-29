@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from myapi.models import Cliente, Clinica,  Medico
+from myapi.models import Cliente, Clinica,  Medico, Consulta
 
 class ClienteSerializer(serializers.ModelSerializer):
 
@@ -19,4 +19,10 @@ class ClinicaSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = Clinica
+        fields = '__all__'
+
+class ConsultaSerializer(serializers.ModelSerializer):
+    class Meta:
+
+        model = Consulta
         fields = '__all__'
