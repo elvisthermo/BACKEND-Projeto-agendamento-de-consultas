@@ -1,24 +1,43 @@
 # BACKEND-Projeto-agendamento-de-consultas
-python3 -m venv env
 
-Instalar python
+API construida para o site de agendamento de consultas para pessoas com posssiveis sintomas de COVID-19.
 
-Criar variavel de ambiente
 
-pip install virtualenv
+Clona o repositorio e depois instala o python 3.8 ou superior.
+depois de intalar e instale a virtualenv(sem ele o django não funfa).
 
-virtualenv env
+`pip install virtualenv `
 
-ou
+depois de instalar, vai na raiz do projeto e digita no terminal:
 
-python3 -m venv env
+`python3 -m venv env`
+Depois de criado o ambiente ative com o seguinte comando.
 
-source env/bin/activate
 
-depois de ativar o ambiente instalar as depencias
+linux
 
-pip install requirements.txt
+`source env/bin/activate`
+
+windows
+
+`\env\Scripts\activate`
+
+O ambiente foi ativado quando aparecer dessa forma no terminal
+
+`(env) C:\Users\rapaix\Documents\Desenvolvimento\BACKEND-Projeto-agendamento-de-consultas>`
+
+depois de ativar o ambiente instalar as depedências
+
+`pip install -r requirements.txt`
+
+depois entra no diretorio do projeto
+
+`cd apiconsultas`
 
 Rodar o servidor 
 
-python manage.py runserver
+`python manage.py runserver`
+
+endereco do servidor da api
+
+http://127.0.0.1:8000/api/
