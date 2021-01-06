@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapi',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
+MIDDLEWARE_CLASSES = (
+    'myapp.CorsMiddleware' 
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,14 +53,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware' 
 ]
 
 ROOT_URLCONF = 'apiconsultas.urls'
 
-
-CORS_ORIGIN_WHITELIST = (
-     'localhost:3000/'
- )
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#      'localhost:3000/'
+#  )
 
 TEMPLATES = [
     {
