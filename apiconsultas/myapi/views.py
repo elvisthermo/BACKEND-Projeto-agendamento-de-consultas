@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from myapi.models import Cliente, Medico, Clinica, Consulta
-from myapi.serializers import ClienteSerializer, MedicoSerializer, ClinicaSerializer, ConsultaSerializer
+from myapi.models import Cliente, Medico, Clinica, Consulta, Especialidade
+from myapi.serializers import ClienteSerializer, MedicoSerializer, ClinicaSerializer, ConsultaSerializer, EspecialidadeSerializer
 
 
 class ClienteViewSet(viewsets.ModelViewSet):
@@ -19,6 +19,9 @@ class ConsultaViewSet(viewsets.ModelViewSet):
     queryset = Consulta.objects.all()
     serializer_class = ConsultaSerializer
 
+class EspecialidadeViewSet(viewsets.ModelViewSet):
+    queryset = Especialidade.objects.all()
+    serializer_class = EspecialidadeSerializer
 
 
 
